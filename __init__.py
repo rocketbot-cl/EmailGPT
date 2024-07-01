@@ -87,6 +87,12 @@ try:
         else:
             raise ValueError("Id is required")
 
+    if module == "connect":
+
+        status = mod_emailgpt_session.connect()
+
+        SetVar(result, status)
+
 
 except Exception as e:
     result = GetParams("result")

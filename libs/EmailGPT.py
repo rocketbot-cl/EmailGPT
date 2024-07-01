@@ -1,4 +1,4 @@
-from gpt_services import get_task, get_tasks
+from gpt_services import connect, get_task, get_tasks
 
 
 class EmailGPT:
@@ -21,3 +21,9 @@ class EmailGPT:
         if res.ok:
             return res.json().get("data", None)
         return None
+
+    def connect(self) -> bool:
+        res = connect(self.api_key)
+        if res.ok:
+            return res.json().get("status", False)
+        return False
