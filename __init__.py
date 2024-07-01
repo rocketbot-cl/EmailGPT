@@ -1,4 +1,6 @@
-# coding: utf-8
+import os
+import sys
+
 """
 Base para desarrollo de modulos externos.
 Para obtener el modulo/Funcion que se esta llamando:
@@ -24,59 +26,73 @@ Para instalar librerias se debe ingresar por terminal a la carpeta "libs"
 
 """
 
-GetParams = GetParams  # type:ignore
-SetVar = SetVar  # type:ignore
-PrintException = PrintException  # type:ignore
+GetParams = GetParams
+SetVar = SetVar
+PrintException = PrintException
 
-import os
-import sys
 
 MODULE_NAME = "EmailGPT"
 
-# Add the libs folder to the system path
-base_path = tmp_global_obj["basepath"]  # type:ignore
+base_path = tmp_global_obj["basepath"]
 module_path = os.path.join(base_path, "modules", MODULE_NAME)
-module_libs_path = os.path.join(module_path, "libs")  # type:ignore
+module_libs_path = os.path.join(module_path, "libs")
 
 if module_libs_path not in sys.path:
     sys.path.append(module_libs_path)
 
-"""
-The code of each module works as a local scope. Each command that is executed resets the data.
-To share information between commands, declare the variable as global. The sintax will be 'mod_modulename' or similar
-"""
-global shared_mod_var
-
-"""
-To connect to multiple databases, a dictionary is created and stores the instance of each connection.
-The syntax is {"session name": {data}}
-"""
 SESSION_DEFAULT = "default"
+global mod_emailgpt_session
 
 try:
-    if not shared_mod_var:  # type:ignore
-        shared_mod_var = {SESSION_DEFAULT: {}}
+    if not mod_emailgpt_session:
+        mod_emailgpt_session = None
 except NameError:
-    shared_mod_var = {SESSION_DEFAULT: {}}
+    mod_emailgpt_session = None
 
 try:
+    from EmailGPT import EmailGPT
+
     module = GetParams("module")  # Get command executed
     session = GetParams("session")  # Get Session name
     result = GetParams("result")  # Get variable name where save results
 
     if not session:
-        session = SESSION_DEFAULT  # Set default session
+        session = SESSION_DEFAULT
 
     if module == "set_api_key":
         api_key = GetParams("api_key")
 
         if api_key:
-            SetVar(result, True)
+            mod_emailgpt_session = EmailGPT(api_key)
+            valid_api_key = mod_emailgpt_session.validate_api_key()
+
+            SetVar(result, valid_api_key)
         else:
             SetVar(result, False)
+            raise ValueError("API key is required")
+
+    if module == "get_tasks_list":
+        uuids = mod_emailgpt_session.get_tasks_list()
+
+        SetVar(result, uuids)
+
+    if module == "get_task_result":
+        task_id = GetParams("task_id")
+
+        if task_id:
+            task = mod_emailgpt_session.get_task_result(task_id)
+
+            SetVar(result, task)
+
+        else:
+            raise ValueError("Id is required")
 
 
 except Exception as e:
+    result = GetParams("result")
+    import traceback
+
+    traceback.print_exc()
     SetVar(result, False)
     PrintException()
     raise e
