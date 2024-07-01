@@ -2,9 +2,6 @@
   
 This module connects to the EmailGPT via API key  
 
-*Read this in other languages: [English](Manual_EmailGPT.md), [Português](Manual_EmailGPT.pr.md), [Español](Manual_EmailGPT.es.md)*
-  
-![banner](imgs/Banner_EmailGPT.png o jpg)
 ## How to install this module
   
 To install the module in Rocketbot Studio, it can be done in two ways:
@@ -16,10 +13,17 @@ To install the module in Rocketbot Studio, it can be done in two ways:
 
 ### Add API key
   
-Add the API key to connect to EmailGPT.
+Add the API key to connect to EmailGPT. You have to run this before running other modules
 |Parameters|Description|example|
 | --- | --- | --- |
 |API key|Your EmailGPT API key.|API KEY|
+|Assign result to variable|Name of the variable where the result of the execution of the command will be assigned.|result|
+
+### Connect to EmailGPT
+  
+
+|Parameters|Description|example|
+| --- | --- | --- |
 |Assign result to variable|Name of the variable where the result of the execution of the command will be assigned.|result|
 
 ### Get task list
