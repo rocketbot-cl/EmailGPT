@@ -59,14 +59,14 @@ try:
     if not session:
         session = SESSION_DEFAULT
 
-    if module == "set_api_key":
+    if module == "connect":
         api_key = GetParams("api_key")
 
         if api_key:
             mod_emailgpt_session = EmailGPT(api_key)
-            valid_api_key = mod_emailgpt_session.validate_api_key()
+            isConnected = mod_emailgpt_session.connect()
 
-            SetVar(result, valid_api_key)
+            SetVar(result, isConnected)
         else:
             SetVar(result, False)
             raise ValueError("API key is required")
@@ -77,21 +77,15 @@ try:
         SetVar(result, uuids)
 
     if module == "get_task_result":
-        task_id = GetParams("task_id")
+        task_uuid = GetParams("task_id")
 
-        if task_id:
-            task = mod_emailgpt_session.get_task_result(task_id)
+        if task_uuid:
+            task = mod_emailgpt_session.get_task_result(task_uuid)
 
             SetVar(result, task)
 
         else:
             raise ValueError("Id is required")
-
-    if module == "connect":
-
-        status = mod_emailgpt_session.connect()
-
-        SetVar(result, status)
 
 
 except Exception as e:
