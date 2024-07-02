@@ -11,19 +11,12 @@ Para instalar el módulo en Rocketbot Studio, se puede hacer de dos formas:
 
 ## Descripción de los comandos
 
-### Agregar api key
-  
-Agrega la clave API para conectarse a EmailGPT. Debes ejecutarlo antes de ejecutar otros modulos
-|Parámetros|Descripción|ejemplo|
-| --- | --- | --- |
-|Clave API|Su apikey de EmailGPT.|API KEY|
-|Asignar resultado a variable|Nombre de la variable donde se asignará el resultado de la execución del comando.|result|
-
 ### Conectar a EmailPGT
   
-Conectate a EmailGPT
+Conectate a EmailGPT pasando tu apikey
 |Parámetros|Descripción|ejemplo|
 | --- | --- | --- |
+|Agrega tu apikey de EmailGPT|API key de EmailGPT|eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9|
 |Asignar resultado a variable|Nombre de la variable donde se asignará el resultado de la execución del comando.|result|
 
 ### Obtener lista de tareas
@@ -33,10 +26,10 @@ Devuelve una lista de tareas asociadas a su cuenta
 | --- | --- | --- |
 |Asignar resultado a variable|Nombre de la variable donde se asignará el resultado de la execución del comando.|result|
 
-### Obtener información de una tarea
+### Obtener resultados de una tarea
   
-Devuelve la información de una tarea
+Devuelve los resultados de una tarea
 |Parámetros|Descripción|ejemplo|
 | --- | --- | --- |
-|Ingrese el id de la tarea que quiere obtener|Id de la tarea que quiere obtener|126|
+|Ingrese el id de la tarea que quiere obtener|Id de la tarea que quiere obtener|84cae6f0f77acb7df36b|
 |Asignar resultado a variable|Nombre de la variable donde se asignará el resultado de la execución del comando.|result|

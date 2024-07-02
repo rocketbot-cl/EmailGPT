@@ -1,3 +1,7 @@
+
+
+
+
 # EmailGPT
   
 This module connects to the EmailGPT via API key  
@@ -14,17 +18,14 @@ To install the module in Rocketbot Studio, it can be done in two ways:
 ## Overview
 
 
-1. Add API key  
-Add the API key to connect to EmailGPT. You have to run this before running other modules
-
-2. Connect to EmailGPT  
+1. Connect to EmailGPT  
 
 
-3. Get task list  
+2. Get task list  
 Returns a list of tasks associated with your account.
 
-4. Get task information  
-Returns the information of a task.  
+3. Get task reskults  
+Returns the reskults of a task.  
 
 
 

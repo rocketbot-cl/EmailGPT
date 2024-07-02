@@ -2,6 +2,9 @@
   
 This module connects to the EmailGPT via API key  
 
+*Read this in other languages: [English](Manual_EmailGPT.md), [Português](Manual_EmailGPT.pr.md), [Español](Manual_EmailGPT.es.md)*
+  
+![banner](imgs/Banner_EmailGPT.png o jpg)
 ## How to install this module
   
 To install the module in Rocketbot Studio, it can be done in two ways:
@@ -11,19 +14,12 @@ To install the module in Rocketbot Studio, it can be done in two ways:
 
 ## Description of the commands
 
-### Add API key
-  
-Add the API key to connect to EmailGPT. You have to run this before running other modules
-|Parameters|Description|example|
-| --- | --- | --- |
-|API key|Your EmailGPT API key.|API KEY|
-|Assign result to variable|Name of the variable where the result of the execution of the command will be assigned.|result|
-
 ### Connect to EmailGPT
   
 
 |Parameters|Description|example|
 | --- | --- | --- |
+|Add your EmailGPT API key|EmailGPT API key|eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9|
 |Assign result to variable|Name of the variable where the result of the execution of the command will be assigned.|result|
 
 ### Get task list
@@ -33,10 +29,10 @@ Returns a list of tasks associated with your account.
 | --- | --- | --- |
 |Assign result to variable|Name of the variable where the result of the execution of the command will be assigned.|result|
 
-### Get task information
+### Get task reskults
   
-Returns the information of a task.
+Returns the reskults of a task.
 |Parameters|Description|example|
 | --- | --- | --- |
-|Enter the task ID you want to obtain|Task ID you want to obtain|126|
+|Enter the task ID you want to obtain|Task ID you want to obtain|84cae6f0f77acb7df36b|
 |Assign result to variable|Name of the variable where the result of the execution of the command will be assigned.|result|

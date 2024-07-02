@@ -1,3 +1,7 @@
+
+
+
+
 # EmailGPT
   
 Este módulo se conecta a EmailGPT a través de la clave API  
@@ -14,17 +18,14 @@ Para instalar el módulo en Rocketbot Studio, se puede hacer de dos formas:
 ## Overview
 
 
-1. Agregar api key  
-Agrega la clave API para conectarse a EmailGPT. Debes ejecutarlo antes de ejecutar otros modulos
+1. Conectar a EmailPGT  
+Conectate a EmailGPT pasando tu apikey
 
-2. Conectar a EmailPGT  
-Conectate a EmailGPT
-
-3. Obtener lista de tareas  
+2. Obtener lista de tareas  
 Devuelve una lista de tareas asociadas a su cuenta
 
-4. Obtener información de una tarea  
-Devuelve la información de una tarea  
+3. Obtener resultados de una tarea  
+Devuelve los resultados de una tarea  
 
 
 
