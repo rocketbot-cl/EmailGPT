@@ -76,11 +76,11 @@ try:
 
         SetVar(result, uuids)
 
-    if module == "get_task_result":
+    if module == "get_task_results":
         task_uuid = GetParams("task_id")
 
         if task_uuid:
-            task = mod_emailgpt_session.get_task_result(task_uuid)
+            task = mod_emailgpt_session.get_task_results(task_uuid)
 
             SetVar(result, task)
 

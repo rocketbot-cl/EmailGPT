@@ -59,7 +59,6 @@
 							"en": "EmailGPT API key",
 							"pr": "Chave de API do EmailGPT"
 						},
-						"remove_vars": true,
 						"id": "api_key",
 						"css": "col-md-6"
 					},
@@ -184,7 +183,6 @@
 							"en": "Task ID you want to obtain",
 							"pr": "ID da tarefa que deseja obter"
 						},
-						"remove_vars": true,
 						"id": "task_id",
 						"css": "col-md-6"
 					},
@@ -209,7 +207,7 @@
 			},
 			"video_youtube": "",
 			"icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAfFJREFUeNpiYBjpgJFcjbslpAOAVD6UO9H1xdMNdHMA0HIHILUfTdgR6IgDpJrFRGYAOBApRjMHUA2Q64AJQHwBif8AKkbXRCgApM5DuYbA+P9A1yiAWgjy+QNyLR8UaYARS9AaAKl6IBYgQr8BlL5AhFpQKDUCQ+sCTgdA4/U+kZaTA0COUESOMiYsPhKgYYgLIIUaGLAQ0iHq4c7Aq6NNlm2fr1xleL1jJ141eB3Aq63NoD9/LkVePunizvD56lXyHMDCzwdnP5o9h6BvYEDQypJBqbgIwwysdgAT3nti4l0uNYWBU1aW4VZdA8P3x4+xG8bHx6A9sR8cbXjAfqCd8ETJREqiAxlsvmcng1JJEVYH2pw+QchyjETJQoyqe719DH8+fgJbDPIlKHhBFl3LhzhErakBHOwg8OfTJ4Z7PX3goIdFA1VKQlAaOGJqAU8HoAQKCg0QhlkOkgMlOpBamhTFIN9dTEwG4x+Pn8DFQWyYOK70QVYuwAVAPn1/7Djc5yA2yHHkABZy8zfIQmKzJaEo+MAwcOADC7BiECTQ2GTglJGFBzexAKQHB0BpvOKNAlDWAwHJ8FAwJiuqPn4iPw2AynBQyUdi4YKSWPHVA0QlQlCeJiVfU9oku0DjRPkBvfVEaZOMVMsxmmSjACDAABvTuD5ypz/RAAAAAElFTkSuQmCC",
-			"module": "get_task_result",
+			"module": "get_task_results",
 			"module_name": "EmailGPT",
 			"visible": true,
 			"options": false,

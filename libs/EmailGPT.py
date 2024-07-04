@@ -12,13 +12,19 @@ class EmailGPT:
             return [task["uuid"] for task in tasks]
         return []
 
-    def get_task_result(self, uuid: str) -> dict | bool:
+    def get_task_results(self, uuid: str) -> list[dict] | bool:
         res = get_tasks(self.api_key)
         if res.ok:
             tasks: list[dict] = res.json().get("data", [])
             task = list(filter(lambda task: task["uuid"] == uuid, tasks))[0]
 
-            return task
+            task_res = get_task(self.api_key, task["id"])
+
+            if task_res.ok:
+                task_data = task_res.json().get("data", {})
+
+                return task_data["task_results"]
+            return False
         return False
 
     def connect(self) -> bool:
