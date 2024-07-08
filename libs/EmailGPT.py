@@ -16,14 +16,26 @@ class EmailGPT:
         res = get_tasks(self.api_key)
         if res.ok:
             tasks: list[dict] = res.json().get("data", [])
-            task = list(filter(lambda task: task["uuid"] == uuid, tasks))[0]
+            if len(tasks) == 0:
+                return []
 
+            task = list(filter(lambda task: task["uuid"] == uuid, tasks))[0]
             task_res = get_task(self.api_key, task["id"])
 
             if task_res.ok:
                 task_data = task_res.json().get("data", {})
+                task_results = task_data.get("task_results", [])
+                task_results_data = [
+                    {
+                        "id": result["id"],
+                        "result": result["result"],
+                        "attacheds": result["attacheds"],
+                        "length": result["length"],
+                    }
+                    for result in task_results
+                ]
 
-                return task_data["task_results"]
+                return task_results_data
             return False
         return False
 
