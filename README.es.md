@@ -1,7 +1,3 @@
-
-
-
-
 # EmailGPT
   
 Este módulo se conecta a EmailGPT a través de la clave API  

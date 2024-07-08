@@ -46,6 +46,22 @@
 			"form": {
 				"css": "modal-lg",
 				"inputs": [
+                    {
+                        "type": "input",
+                        "placeholder": "https://emailgpt.rocketbot.com",
+                        "title": {
+                            "es": "URL de EmailGPT",
+                            "en": "EmailGPT URL",
+                            "pr": "URL do EmailGPT"
+                        },
+                        "description": {
+                            "es": "URL de EmailGPT",
+                            "en": "EmailGPT URL",
+                            "pr": "URL do EmailGPT"
+                        },
+                        "id": "url",
+                        "css": "col-md-12"
+                    },
 					{
 						"type": "input",
 						"placeholder": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9",
@@ -156,8 +172,8 @@
 				"options": null
 			},
 			"en": {
-				"title": "Get task reskults",
-				"description": "Returns the reskults of a task.",
+				"title": "Get task results",
+				"description": "Returns the results of a task.",
 				"title_options": "",
 				"options": null
 			},

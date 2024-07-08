@@ -61,9 +61,10 @@ try:
 
     if module == "connect":
         api_key = GetParams("api_key")
+        url = GetParams("url")
 
         if api_key:
-            mod_emailgpt_session = EmailGPT(api_key)
+            mod_emailgpt_session = EmailGPT(api_key, url)
             isConnected = mod_emailgpt_session.connect()
 
             SetVar(result, isConnected)

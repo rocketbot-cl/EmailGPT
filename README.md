@@ -1,7 +1,3 @@
-
-
-
-
 # EmailGPT
   
 This module connects to the EmailGPT via API key  
@@ -24,8 +20,8 @@ To install the module in Rocketbot Studio, it can be done in two ways:
 2. Get task list  
 Returns a list of tasks associated with your account.
 
-3. Get task reskults  
-Returns the reskults of a task.  
+3. Get task results  
+Returns the results of a task.  
 
 
 
