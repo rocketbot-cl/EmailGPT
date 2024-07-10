@@ -16,24 +16,24 @@ To install the module in Rocketbot Studio, it can be done in two ways:
 
 ### Connect to EmailGPT
   
-
+This command allows you to connect to EmailGPT by indicating the server and the API key.
 |Parameters|Description|example|
 | --- | --- | --- |
-|EmailGPT URL|EmailGPT URL|https://emailgpt.rocketbot.com|
-|Add your EmailGPT API key|EmailGPT API key|eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9|
+|EmailGPT URL|EmailGPT server URL|https://emailgpt.rocketbot.com|
+|EmailGPT API key|EmailGPT API key used for the connection.|eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9|
 |Assign result to variable|Name of the variable where the result of the execution of the command will be assigned.|result|
 
-### Get task list
+### Get tasks list
   
-Returns a list of tasks associated with your account.
+Returns the list of active or paused tasks from your EmailGPT account.
 |Parameters|Description|example|
 | --- | --- | --- |
 |Assign result to variable|Name of the variable where the result of the execution of the command will be assigned.|result|
 
 ### Get task results
   
-Returns the results of a task.
+Returns the results of a task by its ID.
 |Parameters|Description|example|
 | --- | --- | --- |
-|Enter the task ID you want to obtain|Task ID you want to obtain|84cae6f0f77acb7df36b|
+|Task ID|ID of the task you want to get|84cae6f07f7acb7df36b|
 |Assign result to variable|Name of the variable where the result of the execution of the command will be assigned.|result|

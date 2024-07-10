@@ -15,13 +15,13 @@ To install the module in Rocketbot Studio, it can be done in two ways:
 
 
 1. Connect to EmailGPT  
+This command allows you to connect to EmailGPT by indicating the server and the API key.
 
-
-2. Get task list  
-Returns a list of tasks associated with your account.
+2. Get tasks list  
+Returns the list of active or paused tasks from your EmailGPT account.
 
 3. Get task results  
-Returns the results of a task.  
+Returns the results of a task by its ID.  
 
 
 

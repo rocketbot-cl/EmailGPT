@@ -26,14 +26,14 @@ Para instalar librerias se debe ingresar por terminal a la carpeta "libs"
 
 """
 
-GetParams = GetParams
-SetVar = SetVar
-PrintException = PrintException
+GetParams = GetParams # type: ignore
+SetVar = SetVar # type: ignore
+PrintException = PrintException # type: ignore
 
 
 MODULE_NAME = "EmailGPT"
 
-base_path = tmp_global_obj["basepath"]
+base_path = tmp_global_obj["basepath"] # type: ignore
 module_path = os.path.join(base_path, "modules", MODULE_NAME)
 module_libs_path = os.path.join(module_path, "libs")
 
@@ -44,13 +44,14 @@ SESSION_DEFAULT = "default"
 global mod_emailgpt_session
 
 try:
-    if not mod_emailgpt_session:
+    if not mod_emailgpt_session: # type: ignore
         mod_emailgpt_session = None
 except NameError:
     mod_emailgpt_session = None
 
 try:
     from EmailGPT import EmailGPT
+    from gpt_consts import URL # type: ignore
 
     module = GetParams("module")  # Get command executed
     session = GetParams("session")  # Get Session name
@@ -62,15 +63,22 @@ try:
     if module == "connect":
         api_key = GetParams("api_key")
         url = GetParams("url")
+        
+        if url not in URL.keys():
+            SetVar(result, False)
+            raise ValueError("The URL provided does not correspond to a valid EmailGPT Server. Please check the URL and try again.")
 
         if api_key:
             mod_emailgpt_session = EmailGPT(api_key, url)
             isConnected = mod_emailgpt_session.connect()
 
             SetVar(result, isConnected)
+
+            if not isConnected:
+                raise ValueError("The connection could not be established. Please check the API Key or Server URL and try again.")
         else:
             SetVar(result, False)
-            raise ValueError("API key is required")
+            raise ValueError("Api Key is required")
 
     if module == "get_tasks_list":
         uuids = mod_emailgpt_session.get_tasks_list()

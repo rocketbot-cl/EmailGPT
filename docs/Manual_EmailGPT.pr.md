@@ -14,26 +14,26 @@ Para instalar o módulo no Rocketbot Studio, pode ser feito de duas formas:
 
 ## Descrição do comando
 
-### Conectar-se ao EmailGPT
+### Conectar ao EmailGPT
   
-Conecte-se ao EmailGPT
+Este comando permite que você se conecte ao EmailGPT indicando o servidor e a chave da API.
 |Parâmetros|Descrição|exemplo|
 | --- | --- | --- |
-|URL do EmailGPT|URL do EmailGPT|https://emailgpt.rocketbot.com|
-|Adicione sua chave de API do EmailGPT|Chave de API do EmailGPT|eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9|
+|URL do EmailGPT|URL do servidor do EmailGPT|https://emailgpt.rocketbot.com|
+|Chave de API do EmailGPT|Chave de API do EmailGPT usada para a conexão.|eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9|
 |Atribuir resultado a variável|Nome da variável onde será atribuído o resultado da execução do comando.|result|
 
 ### Obter lista de tarefas
   
-Retorna uma lista de tarefas associadas à sua conta.
+Retorna a lista de tarefas ativas ou pausadas da sua conta EmailGPT.
 |Parâmetros|Descrição|exemplo|
 | --- | --- | --- |
 |Atribuir resultado a variável|Nome da variável onde será atribuído o resultado da execução do comando.|result|
 
-### Obter informações de uma tarefa
+### Obter resultados de uma tarefa
   
-Retorna as informações de uma tarefa.
+Retorna os resultados de uma tarefa pelo seu ID.
 |Parâmetros|Descrição|exemplo|
 | --- | --- | --- |
-|Digite o ID da tarefa que deseja obter|ID da tarefa que deseja obter|84cae6f0f77acb7df36b|
+|ID da tarefa|ID da tarefa que deseja obter|84cae6f07f7acb7df36b|
 |Atribuir resultado a variável|Nome da variável onde será atribuído o resultado da execução do comando.|result|

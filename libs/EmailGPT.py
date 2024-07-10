@@ -4,7 +4,7 @@ from gpt_consts import URL
 class EmailGPT:
     def __init__(self, api_key, url):
         self.api_key = api_key
-        self.url_server = URL.get(url, "http://api-emailgpt.rocketbot.com")
+        self.url_server = URL.get(url)
 
     def get_tasks_list(self) -> list[str]:
         res = get_tasks(self.api_key, self.url_server)

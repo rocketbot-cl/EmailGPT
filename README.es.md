@@ -14,14 +14,14 @@ Para instalar el módulo en Rocketbot Studio, se puede hacer de dos formas:
 ## Overview
 
 
-1. Conectar a EmailPGT  
-Conectate a EmailGPT pasando tu apikey
+1. Conectar a EmailGPT  
+Este comando te permite conectarte a EmailGPT indicando el servidor y la clave API
 
 2. Obtener lista de tareas  
-Devuelve una lista de tareas asociadas a su cuenta
+Devuelve la lista de tareas activas o pausadas de tu cuenta de EmailGPT.
 
 3. Obtener resultados de una tarea  
-Devuelve los resultados de una tarea  
+Devuelve los resultados de una tarea por su ID.  
 
 
 

@@ -7,7 +7,7 @@
 		"pr": "Este módulo se conecta ao EmailGPT via chave API"
 	},
 	"disclaimer": "THERE IS NO WARRANTY FOR THE PROGRAM, TO THE EXTENT PERMITTED BY APPLICABLE LAW. EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES PROVIDE THE PROGRAM “AS IS” WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE PROGRAM IS WITH YOU. SHOULD THE PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING, REPAIR OR CORRECTION.",
-	"version": "1.1.2",
+	"version": "1.2.0",
 	"license": "MIT",
 	"homepage": "http://rocketbot.com/",
 	"linux": true,
@@ -26,20 +26,20 @@
 	"children": [
 		{
 			"es": {
-				"title": "Conectar a EmailPGT",
-				"description": "Conectate a EmailGPT pasando tu apikey",
+				"title": "Conectar a EmailGPT",
+				"description": "Este comando te permite conectarte a EmailGPT indicando el servidor y la clave API",
 				"title_options": "",
 				"options": null
 			},
 			"en": {
 				"title": "Connect to EmailGPT",
-				"description": "",
+				"description": "This command allows you to connect to EmailGPT by indicating the server and the API key.",
 				"title_options": "",
 				"options": null
 			},
 			"pr": {
-				"title": "Conectar-se ao EmailGPT",
-				"description": "Conecte-se ao EmailGPT",
+				"title": "Conectar ao EmailGPT",
+				"description": "Este comando permite que você se conecte ao EmailGPT indicando o servidor e a chave da API.",
 				"title_options": "",
 				"options": null
 			},
@@ -55,9 +55,9 @@
                             "pr": "URL do EmailGPT"
                         },
                         "description": {
-                            "es": "URL de EmailGPT",
-                            "en": "EmailGPT URL",
-                            "pr": "URL do EmailGPT"
+                            "es": "URL del servidor de EmailGPT",
+                            "en": "EmailGPT server URL",
+                            "pr": "URL do servidor do EmailGPT"
                         },
                         "id": "url",
                         "css": "col-md-12"
@@ -66,14 +66,14 @@
 						"type": "input",
 						"placeholder": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9",
 						"title": {
-							"es": "Agrega tu apikey de EmailGPT",
-							"en": "Add your EmailGPT API key",
-							"pr": "Adicione sua chave de API do EmailGPT"
-						},
-						"description": {
-							"es": "API key de EmailGPT",
+							"es": "Api key de EmailGPT",
 							"en": "EmailGPT API key",
 							"pr": "Chave de API do EmailGPT"
+						},
+						"description": {
+							"es": "Clave de API de EmailGPT utilizada para la conexión.",
+							"en": "EmailGPT API key used for the connection.",
+							"pr": "Chave de API do EmailGPT usada para a conexão."
 						},
 						"id": "api_key",
 						"css": "col-md-6"
@@ -113,19 +113,19 @@
 		{
 			"es": {
 				"title": "Obtener lista de tareas",
-				"description": "Devuelve una lista de tareas asociadas a su cuenta",
+				"description": "Devuelve la lista de tareas activas o pausadas de tu cuenta de EmailGPT.",
 				"title_options": "",
 				"options": null
 			},
 			"en": {
-				"title": "Get task list",
-				"description": "Returns a list of tasks associated with your account.",
+				"title": "Get tasks list",
+				"description": "Returns the list of active or paused tasks from your EmailGPT account.",
 				"title_options": "",
 				"options": null
 			},
 			"pr": {
 				"title": "Obter lista de tarefas",
-				"description": "Retorna uma lista de tarefas associadas à sua conta.",
+				"description": "Retorna a lista de tarefas ativas ou pausadas da sua conta EmailGPT.",
 				"title_options": "",
 				"options": null
 			},
@@ -167,19 +167,19 @@
 		{
 			"es": {
 				"title": "Obtener resultados de una tarea",
-				"description": "Devuelve los resultados de una tarea",
+				"description": "Devuelve los resultados de una tarea por su ID.",
 				"title_options": "",
 				"options": null
 			},
 			"en": {
 				"title": "Get task results",
-				"description": "Returns the results of a task.",
+				"description": "Returns the results of a task by its ID.",
 				"title_options": "",
 				"options": null
 			},
 			"pr": {
-				"title": "Obter informações de uma tarefa",
-				"description": "Retorna as informações de uma tarefa.",
+				"title": "Obter resultados de uma tarefa",
+				"description": "Retorna os resultados de uma tarefa pelo seu ID.",
 				"title_options": "",
 				"options": null
 			},
@@ -188,15 +188,15 @@
 				"inputs": [
 					{
 						"type": "input",
-						"placeholder": "84cae6f0f77acb7df36b",
+						"placeholder": "84cae6f07f7acb7df36b",
 						"title": {
-							"es": "Ingrese el id de la tarea que quiere obtener",
-							"en": "Enter the task ID you want to obtain",
-							"pr": "Digite o ID da tarefa que deseja obter"
+							"es": "ID de la tarea",
+							"en": "Task ID",
+							"pr": "ID da tarefa"
 						},
 						"description": {
-							"es": "Id de la tarea que quiere obtener",
-							"en": "Task ID you want to obtain",
+							"es": "ID de la tarea que se desea obtener",
+							"en": "ID of the task you want to get",
 							"pr": "ID da tarefa que deseja obter"
 						},
 						"id": "task_id",

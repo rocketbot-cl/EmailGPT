@@ -14,26 +14,26 @@ Para instalar el módulo en Rocketbot Studio, se puede hacer de dos formas:
 
 ## Descripción de los comandos
 
-### Conectar a EmailPGT
+### Conectar a EmailGPT
   
-Conectate a EmailGPT pasando tu apikey
+Este comando te permite conectarte a EmailGPT indicando el servidor y la clave API
 |Parámetros|Descripción|ejemplo|
 | --- | --- | --- |
-|URL de EmailGPT|URL de EmailGPT|https://emailgpt.rocketbot.com|
-|Agrega tu apikey de EmailGPT|API key de EmailGPT|eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9|
+|URL de EmailGPT|URL del servidor de EmailGPT|https://emailgpt.rocketbot.com|
+|Api key de EmailGPT|Clave de API de EmailGPT utilizada para la conexión.|eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9|
 |Asignar resultado a variable|Nombre de la variable donde se asignará el resultado de la execución del comando.|result|
 
 ### Obtener lista de tareas
   
-Devuelve una lista de tareas asociadas a su cuenta
+Devuelve la lista de tareas activas o pausadas de tu cuenta de EmailGPT.
 |Parámetros|Descripción|ejemplo|
 | --- | --- | --- |
 |Asignar resultado a variable|Nombre de la variable donde se asignará el resultado de la execución del comando.|result|
 
 ### Obtener resultados de una tarea
   
-Devuelve los resultados de una tarea
+Devuelve los resultados de una tarea por su ID.
 |Parámetros|Descripción|ejemplo|
 | --- | --- | --- |
-|Ingrese el id de la tarea que quiere obtener|Id de la tarea que quiere obtener|84cae6f0f77acb7df36b|
+|ID de la tarea|ID de la tarea que se desea obtener|84cae6f07f7acb7df36b|
 |Asignar resultado a variable|Nombre de la variable donde se asignará el resultado de la execución del comando.|result|
