@@ -1,0 +1,238 @@
+{
+	"author": "Jose Latines",
+	"description": "This module connects to the EmailGPT via API key",
+	"description_lang": {
+		"es": "Este módulo se conecta a EmailGPT a través de la clave API",
+		"en": "This module connects to the EmailGPT via API key",
+		"pr": "Este módulo se conecta ao EmailGPT via chave API"
+	},
+	"disclaimer": "THERE IS NO WARRANTY FOR THE PROGRAM, TO THE EXTENT PERMITTED BY APPLICABLE LAW. EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES PROVIDE THE PROGRAM “AS IS” WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE PROGRAM IS WITH YOU. SHOULD THE PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING, REPAIR OR CORRECTION.",
+	"version": "1.2.0",
+	"license": "MIT",
+	"homepage": "http://rocketbot.com/",
+	"linux": true,
+	"windows": true,
+	"mac": true,
+	"docker": true,
+	"dependencies": {},
+	"type": "module",
+	"name": "EmailGPT",
+	"title": {
+		"en": "EmailGPT",
+		"es": "EmailGPT",
+		"pr": "EmailGPT"
+	},
+	"icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAfFJREFUeNpiYBjpgJFcjbslpAOAVD6UO9H1xdMNdHMA0HIHILUfTdgR6IgDpJrFRGYAOBApRjMHUA2Q64AJQHwBif8AKkbXRCgApM5DuYbA+P9A1yiAWgjy+QNyLR8UaYARS9AaAKl6IBYgQr8BlL5AhFpQKDUCQ+sCTgdA4/U+kZaTA0COUESOMiYsPhKgYYgLIIUaGLAQ0iHq4c7Aq6NNlm2fr1xleL1jJ141eB3Aq63NoD9/LkVePunizvD56lXyHMDCzwdnP5o9h6BvYEDQypJBqbgIwwysdgAT3nti4l0uNYWBU1aW4VZdA8P3x4+xG8bHx6A9sR8cbXjAfqCd8ETJREqiAxlsvmcng1JJEVYH2pw+QchyjETJQoyqe719DH8+fgJbDPIlKHhBFl3LhzhErakBHOwg8OfTJ4Z7PX3goIdFA1VKQlAaOGJqAU8HoAQKCg0QhlkOkgMlOpBamhTFIN9dTEwG4x+Pn8DFQWyYOK70QVYuwAVAPn1/7Djc5yA2yHHkABZy8zfIQmKzJaEo+MAwcOADC7BiECTQ2GTglJGFBzexAKQHB0BpvOKNAlDWAwHJ8FAwJiuqPn4iPw2AynBQyUdi4YKSWPHVA0QlQlCeJiVfU9oku0DjRPkBvfVEaZOMVMsxmmSjACDAABvTuD5ypz/RAAAAAElFTkSuQmCC",
+	"children": [
+		{
+			"es": {
+				"title": "Conectar a EmailGPT",
+				"description": "Este comando te permite conectarte a EmailGPT indicando el servidor y la clave API",
+				"title_options": "",
+				"options": null
+			},
+			"en": {
+				"title": "Connect to EmailGPT",
+				"description": "This command allows you to connect to EmailGPT by indicating the server and the API key.",
+				"title_options": "",
+				"options": null
+			},
+			"pr": {
+				"title": "Conectar ao EmailGPT",
+				"description": "Este comando permite que você se conecte ao EmailGPT indicando o servidor e a chave da API.",
+				"title_options": "",
+				"options": null
+			},
+			"form": {
+				"css": "modal-lg",
+				"inputs": [
+                    {
+                        "type": "input",
+                        "placeholder": "https://emailgpt.rocketbot.com",
+                        "title": {
+                            "es": "URL de EmailGPT",
+                            "en": "EmailGPT URL",
+                            "pr": "URL do EmailGPT"
+                        },
+                        "description": {
+                            "es": "URL del servidor de EmailGPT",
+                            "en": "EmailGPT server URL",
+                            "pr": "URL do servidor do EmailGPT"
+                        },
+                        "id": "url",
+                        "css": "col-md-12"
+                    },
+					{
+						"type": "input",
+						"placeholder": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9",
+						"title": {
+							"es": "Api key de EmailGPT",
+							"en": "EmailGPT API key",
+							"pr": "Chave de API do EmailGPT"
+						},
+						"description": {
+							"es": "Clave de API de EmailGPT utilizada para la conexión.",
+							"en": "EmailGPT API key used for the connection.",
+							"pr": "Chave de API do EmailGPT usada para a conexão."
+						},
+						"id": "api_key",
+						"css": "col-md-6"
+					},
+					{
+						"type": "input",
+						"placeholder": "result",
+						"title": {
+							"es": "Asignar resultado a variable",
+							"en": "Assign result to variable",
+							"pr": "Atribuir resultado a variável"
+						},
+						"description": {
+							"es": "Nombre de la variable donde se asignará el resultado de la execución del comando.",
+							"en": "Name of the variable where the result of the execution of the command will be assigned.",
+							"pr": "Nome da variável onde será atribuído o resultado da execução do comando."
+						},
+						"remove_vars": true,
+						"id": "result",
+						"css": "col-md-6"
+					}
+				]
+			},
+			"video_youtube": "",
+			"icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAfFJREFUeNpiYBjpgJFcjbslpAOAVD6UO9H1xdMNdHMA0HIHILUfTdgR6IgDpJrFRGYAOBApRjMHUA2Q64AJQHwBif8AKkbXRCgApM5DuYbA+P9A1yiAWgjy+QNyLR8UaYARS9AaAKl6IBYgQr8BlL5AhFpQKDUCQ+sCTgdA4/U+kZaTA0COUESOMiYsPhKgYYgLIIUaGLAQ0iHq4c7Aq6NNlm2fr1xleL1jJ141eB3Aq63NoD9/LkVePunizvD56lXyHMDCzwdnP5o9h6BvYEDQypJBqbgIwwysdgAT3nti4l0uNYWBU1aW4VZdA8P3x4+xG8bHx6A9sR8cbXjAfqCd8ETJREqiAxlsvmcng1JJEVYH2pw+QchyjETJQoyqe719DH8+fgJbDPIlKHhBFl3LhzhErakBHOwg8OfTJ4Z7PX3goIdFA1VKQlAaOGJqAU8HoAQKCg0QhlkOkgMlOpBamhTFIN9dTEwG4x+Pn8DFQWyYOK70QVYuwAVAPn1/7Djc5yA2yHHkABZy8zfIQmKzJaEo+MAwcOADC7BiECTQ2GTglJGFBzexAKQHB0BpvOKNAlDWAwHJ8FAwJiuqPn4iPw2AynBQyUdi4YKSWPHVA0QlQlCeJiVfU9oku0DjRPkBvfVEaZOMVMsxmmSjACDAABvTuD5ypz/RAAAAAElFTkSuQmCC",
+			"module": "connect",
+			"module_name": "EmailGPT",
+			"visible": true,
+			"options": false,
+			"father": "module",
+			"group": "scripts",
+			"linux": true,
+			"windows": true,
+			"mac": true,
+			"docker": true
+		},
+		{
+			"es": {
+				"title": "Obtener lista de tareas",
+				"description": "Devuelve la lista de tareas activas o pausadas de tu cuenta de EmailGPT.",
+				"title_options": "",
+				"options": null
+			},
+			"en": {
+				"title": "Get tasks list",
+				"description": "Returns the list of active or paused tasks from your EmailGPT account.",
+				"title_options": "",
+				"options": null
+			},
+			"pr": {
+				"title": "Obter lista de tarefas",
+				"description": "Retorna a lista de tarefas ativas ou pausadas da sua conta EmailGPT.",
+				"title_options": "",
+				"options": null
+			},
+			"form": {
+				"css": "modal-lg",
+				"inputs": [
+					{
+						"type": "input",
+						"placeholder": "result",
+						"title": {
+							"es": "Asignar resultado a variable",
+							"en": "Assign result to variable",
+							"pr": "Atribuir resultado a variável"
+						},
+						"description": {
+							"es": "Nombre de la variable donde se asignará el resultado de la execución del comando.",
+							"en": "Name of the variable where the result of the execution of the command will be assigned.",
+							"pr": "Nome da variável onde será atribuído o resultado da execução do comando."
+						},
+						"remove_vars": true,
+						"id": "result",
+						"css": "col-md-12"
+					}
+				]
+			},
+			"video_youtube": "",
+			"icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAfFJREFUeNpiYBjpgJFcjbslpAOAVD6UO9H1xdMNdHMA0HIHILUfTdgR6IgDpJrFRGYAOBApRjMHUA2Q64AJQHwBif8AKkbXRCgApM5DuYbA+P9A1yiAWgjy+QNyLR8UaYARS9AaAKl6IBYgQr8BlL5AhFpQKDUCQ+sCTgdA4/U+kZaTA0COUESOMiYsPhKgYYgLIIUaGLAQ0iHq4c7Aq6NNlm2fr1xleL1jJ141eB3Aq63NoD9/LkVePunizvD56lXyHMDCzwdnP5o9h6BvYEDQypJBqbgIwwysdgAT3nti4l0uNYWBU1aW4VZdA8P3x4+xG8bHx6A9sR8cbXjAfqCd8ETJREqiAxlsvmcng1JJEVYH2pw+QchyjETJQoyqe719DH8+fgJbDPIlKHhBFl3LhzhErakBHOwg8OfTJ4Z7PX3goIdFA1VKQlAaOGJqAU8HoAQKCg0QhlkOkgMlOpBamhTFIN9dTEwG4x+Pn8DFQWyYOK70QVYuwAVAPn1/7Djc5yA2yHHkABZy8zfIQmKzJaEo+MAwcOADC7BiECTQ2GTglJGFBzexAKQHB0BpvOKNAlDWAwHJ8FAwJiuqPn4iPw2AynBQyUdi4YKSWPHVA0QlQlCeJiVfU9oku0DjRPkBvfVEaZOMVMsxmmSjACDAABvTuD5ypz/RAAAAAElFTkSuQmCC",
+			"module": "get_tasks_list",
+			"module_name": "EmailGPT",
+			"visible": true,
+			"options": false,
+			"father": "module",
+			"group": "scripts",
+			"linux": true,
+			"windows": true,
+			"mac": true,
+			"docker": true
+		},
+		{
+			"es": {
+				"title": "Obtener resultados de una tarea",
+				"description": "Devuelve los resultados de una tarea por su ID.",
+				"title_options": "",
+				"options": null
+			},
+			"en": {
+				"title": "Get task results",
+				"description": "Returns the results of a task by its ID.",
+				"title_options": "",
+				"options": null
+			},
+			"pr": {
+				"title": "Obter resultados de uma tarefa",
+				"description": "Retorna os resultados de uma tarefa pelo seu ID.",
+				"title_options": "",
+				"options": null
+			},
+			"form": {
+				"css": "modal-lg",
+				"inputs": [
+					{
+						"type": "input",
+						"placeholder": "84cae6f07f7acb7df36b",
+						"title": {
+							"es": "ID de la tarea",
+							"en": "Task ID",
+							"pr": "ID da tarefa"
+						},
+						"description": {
+							"es": "ID de la tarea que se desea obtener",
+							"en": "ID of the task you want to get",
+							"pr": "ID da tarefa que deseja obter"
+						},
+						"id": "task_id",
+						"css": "col-md-6"
+					},
+					{
+						"type": "input",
+						"placeholder": "result",
+						"title": {
+							"es": "Asignar resultado a variable",
+							"en": "Assign result to variable",
+							"pr": "Atribuir resultado a variável"
+						},
+						"description": {
+							"es": "Nombre de la variable donde se asignará el resultado de la execución del comando.",
+							"en": "Name of the variable where the result of the execution of the command will be assigned.",
+							"pr": "Nome da variável onde será atribuído o resultado da execução do comando."
+						},
+						"remove_vars": true,
+						"id": "result",
+						"css": "col-md-6"
+					}
+				]
+			},
+			"video_youtube": "",
+			"icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAfFJREFUeNpiYBjpgJFcjbslpAOAVD6UO9H1xdMNdHMA0HIHILUfTdgR6IgDpJrFRGYAOBApRjMHUA2Q64AJQHwBif8AKkbXRCgApM5DuYbA+P9A1yiAWgjy+QNyLR8UaYARS9AaAKl6IBYgQr8BlL5AhFpQKDUCQ+sCTgdA4/U+kZaTA0COUESOMiYsPhKgYYgLIIUaGLAQ0iHq4c7Aq6NNlm2fr1xleL1jJ141eB3Aq63NoD9/LkVePunizvD56lXyHMDCzwdnP5o9h6BvYEDQypJBqbgIwwysdgAT3nti4l0uNYWBU1aW4VZdA8P3x4+xG8bHx6A9sR8cbXjAfqCd8ETJREqiAxlsvmcng1JJEVYH2pw+QchyjETJQoyqe719DH8+fgJbDPIlKHhBFl3LhzhErakBHOwg8OfTJ4Z7PX3goIdFA1VKQlAaOGJqAU8HoAQKCg0QhlkOkgMlOpBamhTFIN9dTEwG4x+Pn8DFQWyYOK70QVYuwAVAPn1/7Djc5yA2yHHkABZy8zfIQmKzJaEo+MAwcOADC7BiECTQ2GTglJGFBzexAKQHB0BpvOKNAlDWAwHJ8FAwJiuqPn4iPw2AynBQyUdi4YKSWPHVA0QlQlCeJiVfU9oku0DjRPkBvfVEaZOMVMsxmmSjACDAABvTuD5ypz/RAAAAAElFTkSuQmCC",
+			"module": "get_task_results",
+			"module_name": "EmailGPT",
+			"visible": true,
+			"options": false,
+			"father": "module",
+			"group": "scripts",
+			"linux": true,
+			"windows": true,
+			"mac": true,
+			"docker": true
+		}
+	]
+}
